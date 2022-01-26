@@ -7,18 +7,18 @@ import SearchCard from './components/card/SearchCard';
 
 
 
+
 function App() {
   
   return (
     
-    <div className="App">
+    <body className="App">
       <NavBar />
       <div>
-        Welcome
         <Form />
-        <SearchCard />
+        {/* <SearchCard /> */}
       </div>
-    </div>
+    </body>
   );
 }
 
