@@ -1,22 +1,25 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import SearchCard from '../card/SearchCard';
 
 export default function Form() {
   
     const [zipcode, setZipcode] =useState('');
+    const [weatherData, setWeatherData] = useState(null)
+
     console.log(zipcode)
+    console.log(weatherData)
 
-    const handleSubmit = e => {
+    const apiKey = '9d5b71c06e78dc59f8f6f2102a0bf72b'
+
+    const handleSubmit = async e => {
         e.preventDefault();
-        if (!zipcode || zipcode === '') return;
+        const results = await axios(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}`)
+        setWeatherData(results.data);
+        console.log(results)
         
-        
-    };
+    }; 
 
-    //    async function handleSubmit2(e, value){
-//        e.preventDefault();
-//        await axios.
-//    }
   
     return (
         <form onSubmit={handleSubmit}>
