@@ -3,14 +3,8 @@ import React, { useEffect, useState } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const SearchCard = ({weatherData}) => {
-   
-    // console.log(props)
     const info = weatherData;
-    console.log(info.name)
-        
-    console.log("test")
-
-    
+    // console.log(info)
    
 
     return (
@@ -27,14 +21,17 @@ const SearchCard = ({weatherData}) => {
                                             {info.name}
                                             {/* " " */}
                                             </h2>
-                                        <p class="card-text">Wendsday,January, 26, 2022</p>
+                                        <p class="card-text">Wendsday, January, 26, 2022</p>
                                        <hr />
                                        <i className='fas fa-cloud fa-4x'></i>
                                        <h1 className='fw-bolder mb-5'>
                                            {/* {info.main.temp} */}
                                            &deg;F
                                            </h1>
-                                       <p className='lead fw-border mb-0'>Cloud</p>
+                                       <p className='lead fw-border mb-0'>
+                                           {/* {info.weather[0].main} */}
+                                           Sunny
+                                           </p>
                                        <p className='lead'>&deg;F | 35.06 &deg;C</p>
                                         </div>                                       
                                     </div>
