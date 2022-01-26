@@ -4,13 +4,12 @@ import Form from '../Search/Form';
 const SearchCard = (props) => {
 
     const [search, setSearch] =useState("new york");
-    const[data, setData] =useState([]);
     const [weatherData, setWeatherData] = useState(null)
     const[input, setInput] = useState('');
     const [error, setError] = useState(false)
 
     // let componentMounted = true;
-    console.log(props.location)
+    console.log(props.zipcode)
 
     // useEffect(() =>{
     //         const fetchWeather = async () => {
@@ -34,7 +33,7 @@ const SearchCard = (props) => {
     
       const fetchData = async () => {
         try {
-          const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.location.toLowerCase()}&appid=${apiKey}`);
+          const res = await fetch(`api.openweathermap.org/data/2.5/weather?zip=${props.zipcode}&appid=${apiKey}`);
           if (!res.ok) {
             setError(true)
           } else {

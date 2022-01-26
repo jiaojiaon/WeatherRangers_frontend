@@ -3,12 +3,12 @@ import SearchCard from '../card/SearchCard';
 
 export default function Form() {
   
-    const [location, setLocation] =useState('');
-    console.log(location)
+    const [zipcode, setZipcode] =useState('');
+    console.log(zipcode)
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (!location || location === '') return;
+        if (!zipcode || zipcode === '') return;
         
         
     };
@@ -26,13 +26,13 @@ export default function Form() {
                 className='search-form'
                 placeholder='Search for location'
                 requried
-                value={location}
-                onChange={e => setLocation(e.target.value)} />
+                value={zipcode}
+                onChange={e => setZipcode(e.target.value)} />
             <div className='d-flex justify-content-end'></div>
              <button type="button" className='btn btn-primary btn-sm' onClick={handleSubmit} >
                  Search
              </button>
-             <SearchCard location={location} />
+             <SearchCard zipcode={zipcode} />
         </form>
     
        
