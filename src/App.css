@@ -1,7 +1,11 @@
 .App {
   text-align: center;
-}
+  background-color: #282c34;
+}  
 
+body{
+  background-color:#d1f5ff;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +39,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.searchCard{
+  background-color: #282c34;
 }
