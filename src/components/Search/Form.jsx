@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SearchCard from '../card/SearchCard';
 
 export default function Form() {
   
@@ -8,7 +9,8 @@ export default function Form() {
     const handleSubmit = e => {
         e.preventDefault();
         if (!location || location === '') return;
-        // submitSearch(location);
+        
+        
     };
 
     //    async function handleSubmit2(e, value){
@@ -30,7 +32,7 @@ export default function Form() {
              <button type="button" className='btn btn-primary btn-sm' onClick={handleSubmit} >
                  Search
              </button>
-       
+             <SearchCard location={location} />
         </form>
     
        

@@ -1,29 +1,52 @@
 import React, { useEffect, useState } from 'react';
 import Form from '../Search/Form';
 
-const SearchCard = () => {
+const SearchCard = (props) => {
 
     const [search, setSearch] =useState("new york");
     const[data, setData] =useState([]);
+    const [weatherData, setWeatherData] = useState(null)
     const[input, setInput] = useState('');
+    const [error, setError] = useState(false)
 
-    let componentMounted = true;
+    // let componentMounted = true;
+    console.log(props.location)
 
+    // useEffect(() =>{
+    //         const fetchWeather = async () => {
+    //             const response = await fetch(`https//api.openweathermap.org/data/2.5/weather?q=${search}&appid=9d5b71c06e78dc59f8f6f2102a0bf72b
+    //         `);
+    //         if(componentMounted){
+    //             setData(await response.json());
+    //             console.log(data)
+    //         }
+    //         return () => {
+    //             componentMounted = false;
+    //         }
+    //     }
+    //     fetchWeather();
+    // },[])
+    const apiKey = '9d5b71c06e78dc59f8f6f2102a0bf72b'
 
-    useEffect(() =>{
-            const fetchWeather = async () => {
-                const response = await fetch(`https//api.openweathermap.org/data/2.5/weather?q=${search}&appid=9d5b71c06e78dc59f8f6f2102a0bf72b
-            `);
-            if(componentMounted){
-                setData(await response.json());
-                console.log(data)
-            }
-            return () => {
-                componentMounted = false;
-            }
+    useEffect(async () => {
+        await fetchData()
+      }, [error])
+    
+      const fetchData = async () => {
+        try {
+          const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.location.toLowerCase()}&appid=${apiKey}`);
+          if (!res.ok) {
+            setError(true)
+          } else {
+            const obj = await res.json()
+            setError(false)
+            setWeatherData(obj)
+            console.log(weatherData)
+          }
+        } catch (error) {
+          console.log(error)
         }
-        fetchWeather();
-    },[])
+      }
 
 
 
