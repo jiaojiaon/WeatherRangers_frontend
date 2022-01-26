@@ -13,24 +13,26 @@ export default function Form() {
     console.log(zipcode)
     console.log(weatherData)
 
-    // how to call data when you enter the page automatically?
-    // On load, weatherData in SearchCard is undefiend =>  shows Cannot read properties of undefined (reading 'temp')
     
-    useEffect(()=>{
+    useEffect(() => {
         const firstFetch = async () => {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=imperial&appid=${apiKey}`);
-        
-        if(flag){
-            setWeatherData2(await response.json());
-            console.log(weatherData2)
-        }
-        return () => {
-            flag = false;
-        }
+            const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=imperial&appid=${apiKey}`);
+
+            if (flag) {
+                setWeatherData2(await response.json());
+                console.log(weatherData2)
+            }
+            return () => {
+                flag = false;
+            }
         };
 
         firstFetch();
-    },[])
+    }, [])
+
+    // how to call data when you enter the page automatically?
+    // On load, weatherData in SearchCard is undefiend =>  shows Cannot read properties of undefined (reading 'temp')
+  
 
     const apiKey = '9d5b71c06e78dc59f8f6f2102a0bf72b'
 
@@ -42,8 +44,6 @@ export default function Form() {
       
     }; 
 
-    // forcast 16 days
-    // api.openweathermap.org/data/2.5/forecast/daily?zip=94040,us&appid={API key}
 
   
     return (

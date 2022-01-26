@@ -1,13 +1,19 @@
 import React from "react"
 import { useState } from "react"
+import LoginHelper from "../LoginHelper";
 // import { BrowserRouter as Router } from "react-router-dom"
+// send user name pw to backend => backend take info => call user info specified
+// check against given info
+// backend return indication 
+// if correct => navigate to a page 
+// else 
 import { Navigate } from 'react-router-dom'
 
 export default function Login(props) {
 
     const [credentials, setCredentials] = useState({
         user: {
-            userName: "",
+            email: "",
             password: ""
         },
         redirect: false
@@ -22,7 +28,7 @@ export default function Login(props) {
     }
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.mockLogIn(credentials.user)
+        LoginHelper(credentials.user.email, credentials.user.password);
         setCredentials({ redirect: true })
     }
     if (credentials.redirect) {
@@ -34,13 +40,13 @@ export default function Login(props) {
             <form onSubmit={handleSubmit}>
                 <div className="logInfo">
                     <div>
-                        <label htmlFor="userName">User Name:</label>
+                        <label htmlFor="email">Email:</label>
                         <input
                             className="inputbtn"
                             type="text"
-                            name="userName"
-                            placeholder="user name..."
-                            value={credentials.user.userName}
+                            name="email"
+                            placeholder="email..."
+                            value={credentials.user.email}
                             onChange={handleChange}
 
                         />
@@ -50,7 +56,10 @@ export default function Login(props) {
                         <input
                             placeholder="password..."
                             type="password"
+                            // type="text"
                             name="password"
+                            value={credentials.user.password}
+                            onChange={handleChange}
                         />
                     </div>
                 </div>
