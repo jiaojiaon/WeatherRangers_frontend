@@ -12,6 +12,7 @@ export default async function RegistrationHelper(firstName, lastName, email, pas
             password: password
         
     });
+    
     console.log(res); // 200
     console.log(firstName)
     console.log(lastName)
