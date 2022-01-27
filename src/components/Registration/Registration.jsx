@@ -11,11 +11,8 @@ export default function Registration(props) {
         lastName: "",
         email: "",
         password: "",
+        zipCode: ""
        
-    },
-
-    fav: {
-      zipCode: ""
     },
 
     redirect: false
@@ -37,7 +34,7 @@ const handleChange = (event) => {
 const handleSubmit = (event) => {
     event.preventDefault()
     console.log(credentials);
-    RegistrationHelper(credentials.user.firstName,credentials.user.lastName,credentials.user.email, credentials.user.password);
+    RegistrationHelper(credentials.user.firstName,credentials.user.lastName,credentials.user.email, credentials.user.password,credentials.user.zipCode);
     setCredentials({ redirect: true })
 }
 if (credentials.redirect) {
@@ -99,10 +96,10 @@ if (credentials.redirect) {
         <input onChange={handleChange} className="input"
           value={credentials.user.password} type="password" name="password" />
         
-        {/* <label className="label" htmlFor="zipCode">Favorite City</label>
+        <label className="label" htmlFor="zipCode">Favorite City</label>
         <input onChange={handleChange} className="input"
           placeholder='Enter zipcode only'
-          value={credentials.fav.zipCode} type="text" name="zipCode" /> */}
+          value={credentials.user.zipCode} type="number" name="zipCode" />
  
         <button onClick={handleSubmit} className="btn-regi" type="submit">
           Submit

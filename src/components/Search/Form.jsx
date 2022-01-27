@@ -13,7 +13,8 @@ export default function Form() {
     console.log(weatherData)
 
 
-
+    // let id = localStorage.getItem('email')
+    // console.log(id);
 
     const apiKey = '9d5b71c06e78dc59f8f6f2102a0bf72b'
 
