@@ -6,6 +6,7 @@ import Form from './components/Search/Form';
 // import { HashRouter as HashRouter, Routes, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './components/login/login';
+import Registration from './components/Registration/Registration';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Routes>    
           <Route path="/" element={<Form />} />       
             <Route path="/login" element={<Login />} />
+            <Route path="/Registration" element={<Registration />} />
            </Routes>
         </Router>
 
