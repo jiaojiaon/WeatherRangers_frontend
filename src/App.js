@@ -17,10 +17,10 @@ function App() {
 
     <body className="App">
       <NavBar />
-      <div>      
+      <div>
         <Router>
-          <Routes>    
-          <Route path="/" element={<Form />} />       
+          <Routes>
+            <Route path="/" element={<Form />} />
             <Route path="/login" element={<Login />} />
             <Route path="/favorites" element={<Profile />} />
             <Route path="/Registration" element={<Registration />} />

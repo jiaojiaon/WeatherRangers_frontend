@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import LoginHelper from "../LoginHelper";
+import './login.css'
 // import { BrowserRouter as Router } from "react-router-dom"
 // send user name pw to backend => backend take info => call user info specified
 // check against given info
@@ -37,25 +38,26 @@ export default function Login(props) {
     }
 
     return (
-        <div>
+        <div><br />
+            <h1>Sign In</h1><br />
             <form onSubmit={handleSubmit}>
                 <div className="logInfo">
                     <div>
-                        <label htmlFor="email">Email:</label>
-                        <input
-                            className="inputbtn"
+                        <label className="label" htmlFor="email">Email:</label>
+                        <input className="input"
+    
                             type="text"
                             name="email"
-                            placeholder="email..."
+                            placeholder=" Enter email..."
                             value={credentials.user.email}
                             onChange={handleChange}
 
                         />
                     </div>
                     <div>
-                        <label htmlFor="password">Enter Password:</label>
-                        <input
-                            placeholder="password..."
+                        <label className="label" htmlFor="password">Enter Password:</label>
+                        <input className="input"
+                            placeholder="Enter password..."
                             type="password"
                             // type="text"
                             name="password"
@@ -64,7 +66,7 @@ export default function Login(props) {
                         />
                     </div>
                 </div>
-                <button className="logbtn">Log In</button>
+                <button className="btn">Log In</button>
             </form>
         </div>
     )

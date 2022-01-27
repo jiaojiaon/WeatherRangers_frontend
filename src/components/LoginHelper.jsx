@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default async function LoginHelper(email, password) {
 
-    const res = await axios.get('https://pacific-taiga-17233.herokuapp.com/api/users', {
+    const res = await axios.get('https://pacific-taiga-17233.herokuapp.com/api/users/auth', {
         // Axios looks for the `auth` option, and, if it is set, formats a
         // basic auth header for you automatically.
         auth: {

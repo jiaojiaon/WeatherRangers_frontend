@@ -1,0 +1,35 @@
+/* .logInfo{
+    position: absolute;
+    width: 1600px;
+    height: 1026px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+  } */
+  .label{
+    display: block;
+    font-size: larger;
+    color: rgb(85, 152, 184);
+    padding: 5px;
+  }
+
+  .input{
+    font-size: larger;
+    padding: 5px;
+    margin: 2px;
+
+  }
+  .btn{
+    color: black;
+    background-color: rgb(85, 152, 184);
+    border-radius: 5px;
+    font-size: larger;
+    display: block;
+    padding: 5px;
+    margin: 10px auto;
+  }
+
+  h1{
+    color:rgb(85, 152, 184);
+}
