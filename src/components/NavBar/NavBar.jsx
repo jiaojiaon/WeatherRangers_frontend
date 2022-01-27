@@ -1,12 +1,65 @@
 import React from 'react';
 import { Nav, Navbar, Container, Stack } from 'react-bootstrap';
 
+// class LoginControl extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.handleLoginClick = this.handleLoginClick.bind(this);
+//     this.handleLogoutClick = this.handleLogoutClick.bind(this);
+//     this.state = {isLoggedIn: false};
+//   }
+
+//   handleLoginClick() {
+//     this.setState({isLoggedIn: true});
+
+//   }
+
+//   handleLogoutClick() {
+//     this.setState({isLoggedIn: false});
+//   }
+
+//   render() {
+//     const isLoggedIn = this.state.isLoggedIn;
+//     let button;
+
+//     if (isLoggedIn) {
+//       button = <LogoutButton onClick={this.handleLogoutClick} />;
+//     } else {
+//       button = <LoginButton onClick={this.handleLoginClick} />;
+//     }
+
+//     return (
+//       <div>
+//         {button}
+//       </div>
+//     );
+//   }
+// }
+
+
+// function LoginButton(props) {
+//   return (
+//     <button className="btn" onClick={props.onClick}>
+//    <a class="nav-link active" href="/login">Login</a></button>
+
+//   );
+// }
+
+// function LogoutButton(props) {
+//   return (
+//     <button className="btn" onClick={props.onClick}>
+//     <a class="nav-link active" aria-current="page" href="/">Logout</a></button>
+
+//   );
+
+// }
 
 
 export default function NavBar() {
+  
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light"><br /><br /><br />
         <div class="container-fluid">
           <img
             alt=""
@@ -30,8 +83,12 @@ export default function NavBar() {
             </ul>
           </div>
           <Stack direction="horizontal" gap="2" className="mt-4">
+            
+           <button type='button' className="btn btn-primary ms-auto">
+            <a class="nav-link" href="/login">Login</a></button> 
+            {/* <LoginControl /> */}
             <button type='button' className="btn btn-primary ms-auto">
-            <a className="nav-link" href="/login">Login</a></button>
+            <a class="nav-link" href="/">Logout</a></button> 
             <button type='button' className="btn btn-outline-secondary ms-auto"><a class="nav-link" href="/Registration">Registration</a></button>
           </Stack>
 
