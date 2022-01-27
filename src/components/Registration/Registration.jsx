@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Registration.css';
 import RegistrationHelper from '../RegistrationHelper';
 import { Navigate } from 'react-router-dom'
+import Profile from '../Profile/Profile';
 
 export default function Registration(props) {
  
@@ -21,6 +22,7 @@ export default function Registration(props) {
     redirect: false
 });
  
+
   // States for checking the errors
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
@@ -39,8 +41,11 @@ const handleSubmit = (event) => {
     RegistrationHelper(credentials.user.firstName,credentials.user.lastName,credentials.user.email, credentials.user.password);
     setCredentials({ redirect: true })
 }
+
+
 if (credentials.redirect) {
-    return (<Navigate to="/userProfile" />)
+    return (<Navigate to="/userProfile" />,
+            <Profile />)
 }
   // Showing success message
   const successMessage = () => {
@@ -99,7 +104,7 @@ if (credentials.redirect) {
           value={credentials.user.password} type="password" name="password" />
         
         <label className="label" htmlFor="zipCode">Favorite City</label>
-        <input onChange={handleChange} className="input"
+         <input onChange={handleChange} className="input"
           placeholder='Enter zipcode only'
           value={credentials.fav.zipCode} type="text" name="zipCode" />
  

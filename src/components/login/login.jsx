@@ -29,13 +29,23 @@ export default function Login(props) {
     }
     const handleSubmit = (event) => {
         event.preventDefault()
-        LoginHelper(credentials.user.email, credentials.user.password);
-        setCredentials({ redirect: true })
+        const id = LoginHelper(credentials.user.email, credentials.user.password).then(
+            id => { if (id > 0) {
+                setCredentials({...credentials, redirect: true})
+            }}
+        );
+       
+        localStorage.setItem('email', credentials.user.email)
+        console.log(localStorage.getItem('email'))
     }
+
     if (credentials.redirect) {
-        return (<Navigate to="/favorites" />)
+        return (<Navigate to="/favorites" />
+        )
         //maybe name as my_weather or something like that? If we have time
     }
+
+    console.log(credentials.user.email)
 
     return (
         <div><br />
@@ -45,7 +55,7 @@ export default function Login(props) {
                     <div>
                         <label className="label" htmlFor="email">Email:</label>
                         <input className="input"
-    
+
                             type="text"
                             name="email"
                             placeholder=" Enter email..."
