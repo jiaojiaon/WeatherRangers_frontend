@@ -4,7 +4,7 @@ import SearchCard from '../card/SearchCard';
 
 export default function Form() {
   
-    const [zipcode, setZipcode] =useState('10001');
+    const [zipcode, setZipcode] =useState('');
     const [weatherData, setWeatherData] = useState({})
     const [weatherData2, setWeatherData2] = useState([])
 
@@ -30,9 +30,6 @@ export default function Form() {
         firstFetch();
     }, [])
 
-    // how to call data when you enter the page automatically?
-    // On load, weatherData in SearchCard is undefiend =>  shows Cannot read properties of undefined (reading 'temp')
-  
 
     const apiKey = '9d5b71c06e78dc59f8f6f2102a0bf72b'
 
@@ -44,26 +41,28 @@ export default function Form() {
       
     }; 
 
-
   
     return (
         <div>
+        
         <form onSubmit={handleSubmit}>
+            <div className='input-group mb-4 w-50 mx-auto mt-4'>
             <input
                 aria-label='location'
-                type='text'
-                className='search-form'
-                placeholder='Search for location'
+                type='search'
+                className='form-control'
+                placeholder='Search by Zipcode'
                 requried ="true"
                 value={zipcode}
                 onChange={e => setZipcode(e.target.value)} />
-            <div className='d-flex justify-content-end'></div>
+            <div className='justify-content-end'></div>
              <button type="button" className='btn btn-primary btn-sm' onClick={handleSubmit} >
-                 Search
+                 <i className='fas fa-search'></i>
              </button>
-             
+             </div>  
         </form>
             <SearchCard weatherData={weatherData} setWeatherData={setWeatherData}/>
+               
         </div>
        
     

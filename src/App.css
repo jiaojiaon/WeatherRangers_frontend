@@ -45,3 +45,7 @@ body{
 .searchCard{
   background-color: #282c34;
 }
+
+.loading{
+  color: whitesmoke;
+}

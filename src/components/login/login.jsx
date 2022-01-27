@@ -32,7 +32,8 @@ export default function Login(props) {
         setCredentials({ redirect: true })
     }
     if (credentials.redirect) {
-        return (<Navigate to="/userProfile" />)
+        return (<Navigate to="/favorites" />)
+        //maybe name as my_weather or something like that? If we have time
     }
 
     return (
