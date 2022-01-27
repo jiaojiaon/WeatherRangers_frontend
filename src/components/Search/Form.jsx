@@ -4,7 +4,7 @@ import SearchCard from '../card/SearchCard';
 
 export default function Form() {
   
-    const [zipcode, setZipcode] =useState('');
+    const [zipcode, setZipcode] = useState('10001');
     const [weatherData, setWeatherData] = useState({})
     const [weatherData2, setWeatherData2] = useState([])
 

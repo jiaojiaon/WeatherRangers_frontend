@@ -6,6 +6,7 @@ import Form from './components/Search/Form';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './components/login/login';
 import Profile from './components/Profile/Profile';
+import Registration from './components/Registration/Registration';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Form />} />       
             <Route path="/login" element={<Login />} />
             <Route path="/favorites" element={<Profile />} />
+            <Route path="/Registration" element={<Registration />} />
            </Routes>
         </Router>
       </div>

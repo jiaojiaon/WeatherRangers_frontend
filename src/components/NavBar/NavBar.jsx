@@ -31,8 +31,8 @@ export default function NavBar() {
           </div>
           <Stack direction="horizontal" gap="2" className="mt-4">
             <button type='button' className="btn btn-primary ms-auto">
-            <a className='text-white text-decoration-none' href="/login">Login</a></button>
-            <button type='button' className="btn btn-outline-secondary ms-auto">Join Us</button>
+            <a class="nav-link" href="/login">Login</a></button>
+            <button type='button' className="btn btn-outline-secondary ms-auto"><a class="nav-link" href="/Registration">Registration</a></button>
           </Stack>
 
         </div>
