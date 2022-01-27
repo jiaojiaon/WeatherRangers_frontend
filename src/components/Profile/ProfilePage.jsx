@@ -2,27 +2,28 @@ import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 
 //conditional rendering 
-export default function SearchCard(
-    { weatherData }) {
+export default function ProfilePage({ weatherData2 }) {
+
+    // console.log({arr})
 
     // console.log(props)
-    const info = weatherData;
+    const info = weatherData2; 
     console.log(info)
 
    
     let picture = null;
-    if( typeof weatherData.main != "undefined"){
-        if(weatherData.weather[0].main ==="Clouds"){
+    if( typeof weatherData2.main != "undefined"){
+        if(weatherData2.weather[0].main ==="Clouds"){
             picture = "fa-cloud"
-        }else if(weatherData.weather[0].main ==="Clear"){
+        }else if(weatherData2.weather[0].main ==="Clear"){
             picture = "fa-sun"
-        }else if(weatherData.weather[0].main ==="Thunderstorm"){
+        }else if(weatherData2.weather[0].main ==="Thunderstorm"){
             picture = "fa-bolt"
-        }else if(weatherData.weather[0].main ==="Drizzle"){
+        }else if(weatherData2.weather[0].main ==="Drizzle"){
             picture = "fa-cloud-rain"
-        }else if(weatherData.weather[0].main ==="Rain"){
+        }else if(weatherData2.weather[0].main ==="Rain"){
             picture = "fa-cloud-shower-heavy"
-        }else  if(weatherData.weather[0].main ==="snow"){
+        }else  if(weatherData2.weather[0].main ==="snow"){
             picture = "fa-snow-flake"
         }else  {
             picture = "fa-smog"
@@ -39,7 +40,7 @@ export default function SearchCard(
 
         <div className='searchCard'>
             <div className='container mt-5'>
-                <div className='row justify-content-center'>
+                <div className='row'>
                     <div className='col-md-4'>
                         <div class="card bg-dark text-white text-center border-0">
                             <div class="card bg-dark text-white">
@@ -49,7 +50,7 @@ export default function SearchCard(
                                         {info && <h2 className="card-title">
                                             {info.name}
                                         </h2>}
-                                        <p>{moment(weatherData.dt_txt).format('LLL')}</p>
+                                        <p>{moment(weatherData2.dt_txt).format('LLL')}</p>
                                         <hr />
                                         {info.main && <i className={`fas ${picture} fa-6x mb-3`}></i>}
                                         {info.main && <h1 className='fw-bolder mb-5'>

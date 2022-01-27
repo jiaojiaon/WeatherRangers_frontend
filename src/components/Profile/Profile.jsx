@@ -1,63 +1,59 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import ProfilePage from './ProfilePage';
+
 
 //Should be passed down the user id from login page when 
 //authentication is succeed.
 export default function Profile() {
+  const[userData, setUserData] = useState([
+    {zipCode: 20001}
+  ])
+  const [weatherData2, setWeatherData2] = useState([])
+  
+    console.log(userData[0].zipCode)
+    const newZip = userData[0].zipCode 
 
-  const userId = 1;
+    // useEffect(() => {
+    //   async function getFavorites(){
+    //     const res= await axios.get('https://pacific-taiga-17233.herokuapp.com/api/favorites/')       
+    //       setUserData(res.data); 
+    //        console.log(res)      
+    //   }
+    //   getFavorites();
+    
+    // },[])
 
-  const[userData, setUserData] = useState([])
-
+    // useEffect(() => {
+    
+    //   async function callFavorites(){        
+    //         const results =  await axios(`http://api.openweathermap.org/data/2.5/weather?zip=${newZip}&units=imperial&appid=${apiKey}`)
+    //         setWeatherData2(results.data);
+      
+    //     }    
+    //   callFavorites();
+    // },[])
+  const apiKey = '9d5b71c06e78dc59f8f6f2102a0bf72b'
   useEffect(() => {
     async function getFavorites(){
-       await axios.get('https://pacific-taiga-17233.herokuapp.com/api/favorites')
-      .then(function (response) {
-        console.log(response.data)
-        setUserData(response.data);  
-      })
-    }  
-    getFavorites();
-  },[])
-  console.log(userData) 
-  
-  //checking if the data is comming
-  // favorites/userId only comes with 1 result. => get/1 need to be reconsidered 
-
-  // const r = userData.filter(d=>d.userId.every(c => userId.includes(c.userId)));
-  // console.log(r);
-
-  // const r = userData.data.filter(d=>d.userId.every(c => userId.includes(c.userId)));
-  // console.log(userData.data)
-  // const userInfo = 
- 
-  //   const userInfo = [...userData]
-  //  const filteredFav = userInfo.filter(uData => {
-  //    return uData.userId.includes(userId)
-  //  })
-
-  function filterByID(item) {
-    if(item.userId === 1){
-      return true;
+      const res= await axios.get('https://pacific-taiga-17233.herokuapp.com/api/favorites/')       
+        setUserData(res.data); 
+         console.log(res)      
     }
-    return false;
-  }
-
-  let filterR = userData.filter(filterByID)
-
-  console.log(filterR)
-
-  // userData =userData.filter(userId => userData.userId === '1').map(filteredData => (
-  //    filteredData.zipCode
-  // ))
-        
-
-  // console.log(userData)
-  // //   });
-
+    getFavorites();
+  
+    async function callFavorites(){        
+          const results =  await axios(`http://api.openweathermap.org/data/2.5/weather?zip=${newZip}&units=imperial&appid=${apiKey}`)
+          setWeatherData2(results.data);
+    
+      }    
+    callFavorites();
+  },[])
+   
 
   return(
-    <div></div>
+    <div>
+      <ProfilePage weatherData2={weatherData2}/>
+    </div>
   )  
 }
