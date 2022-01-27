@@ -10,8 +10,14 @@ export default function Registration(props) {
         firstName: "",
         lastName: "",
         email: "",
-        password: ""
+        password: "",
+       
     },
+
+    fav: {
+      zipCode: ""
+    },
+
     redirect: false
 });
  
@@ -91,8 +97,13 @@ if (credentials.redirect) {
         <label className="label" htmlFor="password">Password</label>
         <input onChange={handleChange} className="input"
           value={credentials.user.password} type="password" name="password" />
+        
+        <label className="label" htmlFor="zipCode">Favorite City</label>
+        <input onChange={handleChange} className="input"
+          placeholder='Enter zipcode only'
+          value={credentials.fav.zipCode} type="text" name="zipCode" />
  
-        <button onClick={handleSubmit} className="btn" type="submit">
+        <button onClick={handleSubmit} className="btn-regi" type="submit">
           Submit
         </button>
 
