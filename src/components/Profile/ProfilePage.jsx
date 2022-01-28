@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
-
+import "../../index.css"
 //conditional rendering 
 export default function ProfilePage({ weatherData2 }) {
 

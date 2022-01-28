@@ -3,6 +3,10 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    ;
 }
 
 code {
@@ -11,7 +15,11 @@ code {
 
 footer {
     position: absolute;
+    margin: 0 auto -0px;
+    height: auto !important;
     bottom: 0;
+    left: 0;
+    right: 0;
     background-color: whitesmoke;
     color: black;
     width: 100%;
@@ -27,7 +35,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-size: 40px;
+    font-size: 30px;
     gap: 20px;
     margin: auto;
 }
@@ -39,17 +47,17 @@ footer {
 
 .fa-twitter-square {
     color: aqua;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .fa-youtube {
     color: red;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .fa-facebook-square {
     color: #4267B2;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 a.nav-link {
@@ -63,4 +71,12 @@ button {
 
 button#btn-el {
     border: 1px solid #5598b8;
+}
+
+.loading {
+    color: white;
+}
+
+.searchCard {
+    margin-bottom: 100px;
 }

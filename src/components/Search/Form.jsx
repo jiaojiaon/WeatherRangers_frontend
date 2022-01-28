@@ -23,13 +23,13 @@ export default function Form() {
         const results = await axios(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=imperial&appid=${apiKey}`)
 
         setWeatherData(results.data);
-  
+
     };
 
 
 
     return (
-        <div>
+        <div className="search-el">
 
             <form onSubmit={handleSubmit}>
                 <div className='input-group mb-4 w-50 mx-auto mt-4'>
