@@ -21,7 +21,7 @@ export default async function RegistrationHelper(firstName, lastName, email, pas
     let city = info.data.name;
     console.log(city)
     console.log(location.data.id)
-    if (location.data.id > 0) {
+    if (location.data.id != null) {
         locationExist = true;
     }
 
@@ -33,11 +33,12 @@ export default async function RegistrationHelper(firstName, lastName, email, pas
         });
         console.log(newLocation)
     }
-
+    const newLocation = await axios.get(`https://pacific-taiga-17233.herokuapp.com/api/locations/${zipCode}`);
+    console.log(newLocation);
     const favLoc = await axios.post(`https://pacific-taiga-17233.herokuapp.com/api/favorites/`, {
 
         userId: user.data.id,
-        locationId: location.data.id,
+        locationId: newLocation.data.id,
         zipCode: zipCode
 
     });
