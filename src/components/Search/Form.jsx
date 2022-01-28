@@ -23,7 +23,7 @@ export default function Form() {
         const results = await axios(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=imperial&appid=${apiKey}`)
 
         setWeatherData(results.data);
-
+  
     };
 
 
