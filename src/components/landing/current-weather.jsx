@@ -8,7 +8,7 @@ class CurrentWeather extends React.Component {
         const temperature = Math.floor(this.props.current.temp);
         const description = this.props.current.weather[0].description;
         const image = {
-            url: `http://openweathermap.org/img/wn/${this.props.current.weather[0].icon}@4x.png`,
+            url: `https://openweathermap.org/img/wn/${this.props.current.weather[0].icon}@4x.png`,
             alt: `Image of  ${this.props.current.weather[0].description}`,
         };
         const feelsLike = Math.floor(this.props.current.feels_like);

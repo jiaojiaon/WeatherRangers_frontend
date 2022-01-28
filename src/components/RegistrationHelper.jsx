@@ -17,7 +17,7 @@ export default async function RegistrationHelper(firstName, lastName, email, pas
 
     const location = await axios.get(`https://pacific-taiga-17233.herokuapp.com/api/locations/${zipCode}`);
     console.log(location);
-    const info = await axios(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&units=imperial&appid=${apiKey}`)
+    const info = await axios(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&units=imperial&appid=${apiKey}`)
     let city = info.data.name;
     console.log(city)
     console.log(location.data.id)
