@@ -21,27 +21,28 @@ export default async function RegistrationHelper(firstName, lastName, email, pas
     let city = info.data.name;
     console.log(city)
     console.log(location.data.id)
-    if(location.data.id > 0){
-            locationExist = true;
+    if (location.data.id > 0) {
+        locationExist = true;
     }
 
-    if(!locationExist){
-        const newLocation = await axios.post(`https://pacific-taiga-17233.herokuapp.com/api/locations/`,{
-                zipCode: zipCode,
-                city: city,
-                states: "",
+    if (!locationExist) {
+        const newLocation = await axios.post(`https://pacific-taiga-17233.herokuapp.com/api/locations/`, {
+            zipCode: zipCode,
+            city: city,
+            states: "",
         });
         console.log(newLocation)
-        
     }
-    const favLoc = await axios.post(`https://pacific-taiga-17233.herokuapp.com/api/favorites`, {
+
+    const favLoc = await axios.post(`https://pacific-taiga-17233.herokuapp.com/api/favorites/`, {
+
         userId: user.data.id,
         locationId: location.data.id,
         zipCode: zipCode
-    
-    });
-}
 
+    });
+    console.log(favLoc)
+}
 
 
 

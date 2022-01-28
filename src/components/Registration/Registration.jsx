@@ -38,7 +38,7 @@ export default function Registration(props) {
     setSubmitted(true)
   }
   if (credentials.redirect) {
-    return (<Navigate to="/userProfile" />)
+    return (<Navigate to="/login" />)
   }
   // Showing success message
   const successMessage = () => {
