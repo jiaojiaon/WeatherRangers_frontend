@@ -7,8 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './components/login/login';
 import Profile from './components/Profile/Profile';
 import Registration from './components/Registration/Registration';
-
-
+import ForecastHome from './ForecastHome';
 
 
 function App() {
@@ -20,14 +19,15 @@ function App() {
       <div>
         <Router>
           <Routes>
-            <Route path="/" element={<Form />} />
+            <Route path="/" element={<ForecastHome />} />
+            <Route path="/Form" element={<Form />} />
             <Route path="/login" element={<Login />} />
             <Route path="/favorites" element={<Profile />} />
             <Route path="/Registration" element={<Registration />} />
-           </Routes>
+          </Routes>
         </Router>
       </div>
-     
+
     </body>
   );
 }

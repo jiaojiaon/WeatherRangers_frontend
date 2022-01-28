@@ -56,7 +56,7 @@ import { Nav, Navbar, Container, Stack } from 'react-bootstrap';
 
 
 export default function NavBar() {
-  
+
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light"><br /><br /><br />
@@ -80,15 +80,18 @@ export default function NavBar() {
               <li className="nav-item">
                 <a className="nav-link" href="/favorites">Favorite</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Form">Check Weather</a>
+              </li>
             </ul>
           </div>
           <Stack direction="horizontal" gap="2" className="mt-4">
-            
-           <button type='button' className="btn btn-primary ms-auto">
-            <a class="nav-link" href="/login">Login</a></button> 
+
+            <button type='button' className="btn btn-primary ms-auto">
+              <a class="nav-link" href="/login">Login</a></button>
             {/* <LoginControl /> */}
             <button type='button' className="btn btn-primary ms-auto">
-            <a class="nav-link" href="/">Logout</a></button> 
+              <a class="nav-link" href="/">Logout</a></button>
             <button type='button' className="btn btn-outline-secondary ms-auto"><a class="nav-link" href="/Registration">Registration</a></button>
           </Stack>
 
