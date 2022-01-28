@@ -20,13 +20,9 @@ export default function ProfileHelper() {
         }catch(error){
          throw error.message   
         }
-
-
     },[])
 
     console.log(users)
-
-    
 
     if(users.length > 0){
     const findId = users.filter(user => user.email === email)   
@@ -42,7 +38,7 @@ export default function ProfileHelper() {
     const result = resp.data
     console.log(resp)
     console.log(result)
-    // localStorage.setItem('zipcode',result[0].zipCode) 
+    localStorage.setItem('zipcode',result[0].zipCode) 
     const zip = result[0].zipCode
 } 
    getResp();
