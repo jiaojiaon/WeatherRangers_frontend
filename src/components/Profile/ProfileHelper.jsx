@@ -28,25 +28,27 @@ export default function ProfileHelper() {
 
     
 
-    // if(email !== "" && users){
-    // const findId = users.filter(user => user.email === email)   
-    // const val =  findId[0].id               
-    // console.log(findId[0].id)
-    // localStorage.setItem('id',val )
-    // }
+    if(users.length > 0){
+    const findId = users.filter(user => user.email === email)   
+    const val =  findId[0].id               
+    console.log(findId[0].id)
+    localStorage.setItem('id',val )
+    }
 
     let filteredId = localStorage.getItem('id')
      
    async function getResp(){
     const resp= await axios.get(`https://pacific-taiga-17233.herokuapp.com/api/favorites/${filteredId}`); 
     const result = resp.data
+    console.log(resp)
     console.log(result)
-    localStorage.setItem('zipcode',result[0].zipCode) 
-   } 
+    // localStorage.setItem('zipcode',result[0].zipCode) 
+    const zip = result[0].zipCode
+} 
    getResp();
 
    const zipResult = localStorage.getItem('zipcode')
    console.log(zipResult)
 
-  return <div></div>;
+  return <div></div>; 
 }

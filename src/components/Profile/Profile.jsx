@@ -17,8 +17,9 @@ export default function Profile() {
     
   const [weatherData2, setWeatherData2] = useState([])
   
-    console.log(userData[0].zipCode)
-    // const newZip = userData[0].zipCode 
+  console.log(userData[0].zipCode)
+  // const newZip = userData[0].zipCode 
+    ProfileHelper();
     const newZip = localStorage.getItem('zipcode')
 
   const apiKey = '9d5b71c06e78dc59f8f6f2102a0bf72b'
@@ -37,7 +38,6 @@ export default function Profile() {
       }    
     callFavorites();
   },[])
-  ProfileHelper();
 
   return(
     <div>
