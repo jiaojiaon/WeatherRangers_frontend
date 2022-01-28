@@ -7,28 +7,28 @@ export default function ProfilePage({ weatherData2 }) {
     // console.log({arr})
 
     // console.log(props)
-    const info = weatherData2; 
+    const info = weatherData2;
     console.log(info)
 
-   
+
     let picture = null;
-    if( typeof weatherData2.main != "undefined"){
-        if(weatherData2.weather[0].main ==="Clouds"){
+    if (typeof weatherData2.main != "undefined") {
+        if (weatherData2.weather[0].main === "Clouds") {
             picture = "fa-cloud"
-        }else if(weatherData2.weather[0].main ==="Clear"){
+        } else if (weatherData2.weather[0].main === "Clear") {
             picture = "fa-sun"
-        }else if(weatherData2.weather[0].main ==="Thunderstorm"){
+        } else if (weatherData2.weather[0].main === "Thunderstorm") {
             picture = "fa-bolt"
-        }else if(weatherData2.weather[0].main ==="Drizzle"){
+        } else if (weatherData2.weather[0].main === "Drizzle") {
             picture = "fa-cloud-rain"
-        }else if(weatherData2.weather[0].main ==="Rain"){
+        } else if (weatherData2.weather[0].main === "Rain") {
             picture = "fa-cloud-shower-heavy"
-        }else  if(weatherData2.weather[0].main ==="snow"){
+        } else if (weatherData2.weather[0].main === "snow") {
             picture = "fa-snow-flake"
-        }else  {
+        } else {
             picture = "fa-smog"
         }
-    }else{
+    } else {
         return (
             <div className='loading'>...Where do you want to go?</div>
         )
@@ -40,7 +40,7 @@ export default function ProfilePage({ weatherData2 }) {
 
         <div className='searchCard'>
             <div className='container mt-5'>
-                <div className='row'>
+                <div className='row justify-content-center'>
                     <div className='col-md-4'>
                         <div class="card bg-dark text-white text-center border-0">
                             <div class="card bg-dark text-white">

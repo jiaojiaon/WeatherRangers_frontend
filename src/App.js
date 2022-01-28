@@ -8,7 +8,7 @@ import Login from './components/login/login';
 import Profile from './components/Profile/Profile';
 import Registration from './components/Registration/Registration';
 import ForecastHome from './components/landing/ForecastHome';
-
+import Footer from './components/Footer';
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
           </Routes>
         </Router>
       </div>
-
+      <Footer />
     </body>
   );
 }

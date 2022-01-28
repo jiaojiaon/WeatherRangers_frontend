@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav, Navbar, Container, Stack } from 'react-bootstrap';
-
+import "../../index.css"
 // class LoginControl extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -53,10 +53,7 @@ import { Nav, Navbar, Container, Stack } from 'react-bootstrap';
 //   );
 
 // }
-
-
 export default function NavBar() {
-
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light"><br /><br /><br />
@@ -87,12 +84,12 @@ export default function NavBar() {
           </div>
           <Stack direction="horizontal" gap="2" className="mt-4">
 
-            <button type='button' className="btn btn-primary ms-auto">
+            <button id="btn-el" type='button' className="btn btn-primary ms-auto">
               <a class="nav-link" href="/login">Login</a></button>
             {/* <LoginControl /> */}
-            <button type='button' className="btn btn-primary ms-auto">
+            <button id="btn-el" type='button' className="btn btn-primary ms-auto">
               <a class="nav-link" href="/">Logout</a></button>
-            <button type='button' className="btn btn-outline-secondary ms-auto"><a class="nav-link" href="/Registration">Registration</a></button>
+            <button id="btn-el" type='button' className="btn btn-outline-secondary ms-auto"><a class="nav-link" href="/Registration">Registration</a></button>
           </Stack>
 
         </div>

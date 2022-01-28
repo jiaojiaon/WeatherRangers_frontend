@@ -1,53 +1,57 @@
 .App {
     text-align: center;
-    background-color:#282c34;
-  }
+    background-color: #282c34;
+}
 
-  .label{
+.label {
     display: block;
     font-size: larger;
     color: rgb(85, 152, 184);
     padding: 5px;
-  }
+}
 
-  .input{
+.input {
     font-size: larger;
     padding: 5px;
     margin: 2px;
+    border-radius: 5px;
+    border: #282c34 solid 1px;
+}
 
-  }
-  .btn-regi{
-    color: black;
+.btn-regi {
+    color: white;
     background-color: rgb(85, 152, 184);
     border-radius: 5px;
+    border: 1px rgb(85, 152, 184) solid;
     font-size: larger;
     display: block;
     padding: 5px;
     margin: 10px auto;
-  }
+}
 
-  .messages{
+.messages {
     display: flex;
     justify-content: center;
-  }
+}
 
-  .error{
+.error {
     display: block;
     background-color: rgb(85, 152, 184);
     color: white;
     width: fit-content;
     height: 50px;
     padding: 5px;
-  }
+}
 
-  .success{
+.success {
     display: block;
     background-color: lightblue;
     color: black;
     width: fit-content;
     height: 50px;
     padding: 5px;
-  }
-  h1{
-      color:rgb(85, 152, 184);
-  }
+}
+
+h1 {
+    color: rgb(85, 152, 184);
+}
