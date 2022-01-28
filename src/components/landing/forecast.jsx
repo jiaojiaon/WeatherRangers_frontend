@@ -6,7 +6,7 @@ class Forecast extends React.Component {
     render() {
         const items = this.props.forecast.map((f, i) => {
             const image = {
-                url: `http://openweathermap.org/img/wn/${f.weather[0].icon}@2x.png`,
+                url: `https://openweathermap.org/img/wn/${f.weather[0].icon}@2x.png`,
                 alt: `Image of  ${f.weather[0].description}`,
             };
             const description = f.weather[0].description;

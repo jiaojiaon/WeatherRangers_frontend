@@ -32,7 +32,7 @@ export default function Profile() {
     // getFavorites();
   
     async function callFavorites(){        
-          const results =  await axios(`http://api.openweathermap.org/data/2.5/weather?zip=${newZip}&units=imperial&appid=${apiKey}`)
+          const results =  await axios(`https://api.openweathermap.org/data/2.5/weather?zip=${newZip}&units=imperial&appid=${apiKey}`)
           setWeatherData2(results.data);
     
       }    

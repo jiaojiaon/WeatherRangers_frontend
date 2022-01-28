@@ -31,7 +31,7 @@ export default function Login(props) {
                 setCredentials({...credentials, redirect: true})
                 localStorage.setItem('email', credentials.user.email)
             }}
-        ).catch(err => console.log(err)) ;
+        ).catch(err => alert("Invalid Login")) ;
         // console.log(localStorage.getItem('email'))
     }
     if (credentials.redirect) {
@@ -39,7 +39,7 @@ export default function Login(props) {
         )
         //maybe name as my_weather or something like that? If we have time
     }
-    console.log(credentials.user.email)
+    // console.log(credentials.user.email)
     return (
         <div><br />
             <h1>Sign In</h1><br />

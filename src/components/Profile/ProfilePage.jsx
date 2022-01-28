@@ -44,7 +44,7 @@ export default function ProfilePage({ weatherData2 }) {
                     <div className='col-md-4'>
                         <div class="card bg-dark text-white text-center border-0">
                             <div class="card bg-dark text-white">
-                                <img class="card-img" src="http://source.unsplash.com/900x1500/?nature,weather" alt="card-image" />
+                                <img class="card-img" src="https://source.unsplash.com/900x1500/?nature,weather" alt="card-image" />
                                 <div class="card-img-overlay">
                                     <div className="bg-dark bg-opacity-50 py-3">
                                         {info && <h2 className="card-title">

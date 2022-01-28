@@ -22,6 +22,7 @@ export default async function LoginHelper(email, password) {
             });
         console.log(res); // 200
         console.log(res.status);
+        
         if (res.status === 200) {
             id = res.data.id
         }
