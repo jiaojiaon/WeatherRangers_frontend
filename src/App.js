@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './components/login/login';
 import Profile from './components/Profile/Profile';
 import Registration from './components/Registration/Registration';
-import ForecastHome from './ForecastHome';
+import ForecastHome from './components/landing/ForecastHome';
 
 
 function App() {

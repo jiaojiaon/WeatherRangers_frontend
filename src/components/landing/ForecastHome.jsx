@@ -1,10 +1,9 @@
 import React from "react";
-import "./App.css";
-
-import CurrentWeather from "./components/current-weather";
-import Forecast from "./components/forecast";
-import "./index.css"
-import * as Api from "./api/weatherAPI";
+import "../../App.css";
+import CurrentWeather from "./current-weather";
+import Forecast from "./forecast";
+import "../../index.css"
+import * as Api from "../../api/weatherAPI";
 
 const FARENHEIT = "farehnheit";
 
