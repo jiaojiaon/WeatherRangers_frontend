@@ -31,11 +31,24 @@ export default function Registration(props) {
     setCredentials({ user: updatedUser })
   }
 
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault()
+//     const id = LoginHelper(credentials.user.email, credentials.user.password).then(
+//         id => { if (id > 0) {
+//             setCredentials({...credentials, redirect: true})
+//             localStorage.setItem('email', credentials.user.email)
+//         }}
+//     ).catch(err => console.log(err)) ;
+//     // console.log(localStorage.getItem('email'))
+// } 
+
   const handleSubmit = (event) => {
     event.preventDefault()
     console.log(credentials);
     RegistrationHelper(credentials.user.firstName, credentials.user.lastName, credentials.user.email, credentials.user.password, credentials.user.zipCode).catch(error => error.message());
     setSubmitted(true)
+    localStorage.setItem('zipcode', credentials.user.zipCode)
   }
   if (credentials.redirect) {
     return (<Navigate to="/login" />)
