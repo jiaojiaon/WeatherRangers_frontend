@@ -4,7 +4,7 @@ import SearchCard from '../card/SearchCard';
 import Profile from '../Profile/Profile'
 
 export default function Form() {
-    const [zipcode, setZipcode] = useState('');
+    const [zipcode, setZipcode] = useState([]);
     const [weatherData, setWeatherData] = useState({})
 
     let flag = true;
@@ -44,16 +44,16 @@ export default function Form() {
                         onChange={e => setZipcode(e.target.value)} />
                     <div className='justify-content-end'></div>
                     <button type="button" className='button ' onClick={handleSubmit} >
-                        <i className='fas fa-search'></i>                        
+                        <i className='fas fa-search'></i>
                     </button>
                 </div>
             </form>
-           
-                <SearchCard weatherData={weatherData} setWeatherData={setWeatherData} />
-         
+
+            <SearchCard weatherData={weatherData} setWeatherData={setWeatherData} />
+
 
         </div>
 
 
-            );
+    );
 }
