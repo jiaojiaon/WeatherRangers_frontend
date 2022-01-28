@@ -20,7 +20,7 @@ export default function Form() {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const results = await axios(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=imperial&appid=${apiKey}`)
+        const results = await axios(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=imperial&appid=${apiKey}`)
 
         setWeatherData(results.data);
   
