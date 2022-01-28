@@ -27,39 +27,20 @@ export default function NavBar() {
               <li class="nav-item">
                 <a class="nav-link" href="/favorites">Favorite</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Form">Check Weather</a>
+              </li>
             </ul>
           </div>
           <Stack direction="horizontal" gap="2" className="mt-4">
             <button type='button' className="btn btn-primary ms-auto">
-            <a class="nav-link" href="/login">Login</a></button>
+              <a class="nav-link" href="/login">Login</a></button>
             <button type='button' className="btn btn-outline-secondary ms-auto"><a class="nav-link" href="/Registration">Registration</a></button>
           </Stack>
 
         </div>
       </nav>
-      {/* <Navbar bg="light" expand='sm' variant="light">
-        <Container>
-        <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src="/images/weatherlogo.png"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{' '}
-            Weather rangers
-          </Navbar.Brand>          
-            <Nav>
-              <Nav.Link herf='/' className='text-left'>Home</Nav.Link>
-              <Nav.Link herf='/'>Favorite</Nav.Link>
-              <form className="form-inline my-2 my-lg-0 text-left">
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button  type="submit">Search</button>
-              </form>
-            </Nav>
-        
-          </Container>
-    </Navbar> */}
+
     </>
 
 

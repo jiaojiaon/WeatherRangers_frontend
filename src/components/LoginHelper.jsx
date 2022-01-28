@@ -11,5 +11,5 @@ export default async function LoginHelper(email, password) {
         }
     });
     console.log(res); // 200
-  
+
 }
