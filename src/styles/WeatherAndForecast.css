@@ -1,0 +1,29 @@
+.WeatherAndForecast {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #f2f2f2;
+    padding: 2rem 3rem;
+}
+
+.dailyforecast {
+    margin-top: 10px;
+    width: auto;
+    padding-top: 10px;
+    color: black;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+
+/* .WeatherAndForecast__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+} */
+
+@media (max-width: 375px) {
+    .WeatherAndForecast {
+        padding: 2rem;
+    }
+}

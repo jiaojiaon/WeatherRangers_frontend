@@ -14,7 +14,7 @@ code {
 }
 
 footer {
-    position: absolute;
+    position: -webkit-sticky;
     margin: 0 auto -0px;
     height: auto !important;
     bottom: 0;

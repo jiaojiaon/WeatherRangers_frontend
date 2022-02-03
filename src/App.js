@@ -7,8 +7,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './components/login/login';
 import Profile from './components/Profile/Profile';
 import Registration from './components/Registration/Registration';
-import ForecastHome from './components/landing/ForecastHome';
+// import ForecastHome from './components/landing/ForecastHome';
 import Footer from './components/Footer';
+import WeatherForecast from './components/WeatherForecast';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
       <div>
         <Router>
           <Routes>
-            <Route path="/" element={<ForecastHome />} />
+            <Route path="/" element={<WeatherForecast />} />
             <Route path="/Form" element={<Form />} />
             <Route path="/login" element={<Login />} />
             <Route path="/favorites" element={<Profile />} />
