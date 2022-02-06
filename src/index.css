@@ -5,3 +5,11 @@ html {
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
 }
+
+.nav-lin {
+    color: black;
+}
+
+.logreg {
+    display: flex;
+}

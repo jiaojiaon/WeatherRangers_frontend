@@ -5,7 +5,7 @@ import "../../styles/Forecast.css";
 export default function Forecast({ weatherInfo, date }) {
     return (
         <div className="wForecast">
-            <h1 className="Forecast__title">{[date[0], date[1], date[2]]}</h1>
+            <h2 className="Forecast__title">{[date[0], date[1], date[2]]}</h2>
             <img
                 className="Forecast__weather-icon"
                 src={

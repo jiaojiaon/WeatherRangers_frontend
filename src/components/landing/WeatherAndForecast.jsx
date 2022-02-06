@@ -45,6 +45,7 @@ function WeatherAndForecast({ weatherInfo, location }) {
       </div>
       <div className=" dailyforecast">
         <h3>Daily Forecast</h3>
+        <hr></hr>
         <div className="WeatherAndForecast__container">
           <Forecast weatherInfo={weatherInfo.daily[0]} date={date[0]} />
           <Forecast weatherInfo={weatherInfo.daily[1]} date={date[1]} />

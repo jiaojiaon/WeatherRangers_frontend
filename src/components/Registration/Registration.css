@@ -6,27 +6,33 @@
 .label {
     display: block;
     font-size: larger;
-    color: rgb(85, 152, 184);
+    /* color: rgb(85, 152, 184); */
+    color: white;
     padding: 5px;
 }
 
 .input {
-    font-size: larger;
-    padding: 5px;
+    font-size: large;
+    padding: 5px 40px;
     margin: 2px;
-    border-radius: 5px;
-    border: #282c34 solid 1px;
+    border-radius: 15px;
+    border: antiquewhite solid 1px;
 }
 
 .btn-regi {
     color: white;
     background-color: rgb(85, 152, 184);
-    border-radius: 5px;
+    border-radius: 30px;
     border: 1px rgb(85, 152, 184) solid;
     font-size: larger;
     display: block;
-    padding: 5px;
+    padding: 5px 40px;
     margin: 10px auto;
+}
+
+.btn-regi:hover {
+    background-color: rgb(92, 92, 8);
+    transition: all 200ms ease-in;
 }
 
 .messages {
@@ -45,13 +51,69 @@
 
 .success {
     display: block;
-    background-color: lightblue;
+    background-color: transparent;
     color: black;
     width: fit-content;
     height: 50px;
     padding: 5px;
 }
 
+$avatar-size: 32px;
+
+/* $body-background: #353535; */
+
+@font-face {
+    font-family: "ubuntu";
+    font-style: italic;
+    font-weight: 300;
+    src: local("Lato Light Italic"), local("Lato-LightItalic"), url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2) format("woff2");
+}
+
+.wrapper {
+    text-align: center;
+}
+
 h1 {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(to right, #1475ca 10%, #71bbdd 50%, #fd9a80 60%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+/* h1 {
+    margin: 10px;
     color: rgb(85, 152, 184);
+} */
+
+.registerel {
+    background-color: #fd9a80;
+    width: fit-content;
+    padding: 10px 50px;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.return {
+    font-weight: bold;
+    margin: 5px 0;
 }

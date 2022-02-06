@@ -32,16 +32,16 @@ export default function Registration(props) {
   }
 
 
-//   const handleSubmit = (event) => {
-//     event.preventDefault()
-//     const id = LoginHelper(credentials.user.email, credentials.user.password).then(
-//         id => { if (id > 0) {
-//             setCredentials({...credentials, redirect: true})
-//             localStorage.setItem('email', credentials.user.email)
-//         }}
-//     ).catch(err => console.log(err)) ;
-//     // console.log(localStorage.getItem('email'))
-// } 
+  //   const handleSubmit = (event) => {
+  //     event.preventDefault()
+  //     const id = LoginHelper(credentials.user.email, credentials.user.password).then(
+  //         id => { if (id > 0) {
+  //             setCredentials({...credentials, redirect: true})
+  //             localStorage.setItem('email', credentials.user.email)
+  //         }}
+  //     ).catch(err => console.log(err)) ;
+  //     // console.log(localStorage.getItem('email'))
+  // } 
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -82,8 +82,8 @@ export default function Registration(props) {
   return (
     <>
       <div className="form">
-        <div>
-          <h1>Weather Rangers Registration</h1>
+        <div className="wrapper">
+          <h1>Welcome!!</h1>
         </div>
 
         {/* Calling to the methods */}
@@ -91,34 +91,35 @@ export default function Registration(props) {
           {errorMessage()}
           {successMessage()}
         </div>
+        <div className="registerel">
+          <form onSubmit={handleSubmit}>
+            {/* Labels and inputs for form data */}
+            <label className="label" htmlFor="firstName">First Name</label>
+            <input onChange={handleChange} className="input"
+              value={credentials.user.firstName} type="text" name="firstName" />
+            <label className="label" htmlFor="lastName">Last Name</label>
+            <input onChange={handleChange} className="input"
+              value={credentials.user.lastName} type="text" name="lastName" />
 
-        <form onSubmit={handleSubmit}>
-          {/* Labels and inputs for form data */}
-          <label className="label" htmlFor="firstName">First Name</label>
-          <input onChange={handleChange} className="input"
-            value={credentials.user.firstName} type="text" name="firstName" />
-          <label className="label" htmlFor="lastName">Last Name</label>
-          <input onChange={handleChange} className="input"
-            value={credentials.user.lastName} type="text" name="lastName" />
+            <label className="label" htmlFor="email">Email</label>
+            <input onChange={handleChange} className="input"
+              value={credentials.user.email} type="email" name="email" />
 
-          <label className="label" htmlFor="email">Email</label>
-          <input onChange={handleChange} className="input"
-            value={credentials.user.email} type="email" name="email" />
+            <label className="label" htmlFor="password">Password</label>
+            <input onChange={handleChange} className="input"
+              value={credentials.user.password} type="password" name="password" />
 
-          <label className="label" htmlFor="password">Password</label>
-          <input onChange={handleChange} className="input"
-            value={credentials.user.password} type="password" name="password" />
+            <label className="label" htmlFor="zipCode">Favorite City</label>
+            <input onChange={handleChange} className="input"
+              placeholder='Enter zipcode only'
+              value={credentials.user.zipCode} type="number" name="zipCode" />
 
-          <label className="label" htmlFor="zipCode">Favorite City</label>
-          <input onChange={handleChange} className="input"
-            placeholder='Enter zipcode only'
-            value={credentials.user.zipCode} type="number" name="zipCode" />
-
-          <button onClick={handleSubmit} className="btn-regi" type="submit">
-            Submit
-          </button>
-
-        </form>
+            <button onClick={handleSubmit} className="btn-regi" type="submit">
+              Register
+            </button>
+            <a class="return" href="/login">Return to login</a>
+          </form>
+        </div>
       </div>
     </>
   );

@@ -51,7 +51,8 @@ export default function NavBar() {
             {/* <LoginControl /> */}
             <button id="btn-el" type='button' className="btn btn-primary ms-auto">
               <a class="nav-link" href="/">Logout</a></button>
-            <button id="btn-el" type='button' className="btn btn-outline-secondary ms-auto"><a class="nav-link" href="/Registration">Registration</a></button>
+            <button id="btn-el" type='button' className="btn btn-outline-secondary ms-auto">
+              <a class="nav-link" href="/Registration">Registration</a></button>
           </Stack>
 
         </div>

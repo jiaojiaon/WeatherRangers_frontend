@@ -7,29 +7,64 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
   } */
-  .label{
+
+.label {
     display: block;
     font-size: larger;
     color: rgb(85, 152, 184);
     padding: 5px;
-  }
+}
 
-  .input{
+.input {
     font-size: larger;
     padding: 5px;
     margin: 2px;
+}
 
-  }
-  .btn{
-    color: black;
+::placeholder {
+    opacity: 0.5;
+}
+
+.btn {
+    color: white;
     background-color: rgb(85, 152, 184);
+    border: 1px rgb(85, 152, 184);
     border-radius: 5px;
     font-size: larger;
     display: block;
     padding: 5px;
-    margin: 10px auto;
-  }
+    margin: 5px auto;
+}
 
-  h1{
-    color:rgb(85, 152, 184);
+h1 {
+    color: rgb(85, 152, 184);
+}
+
+.loginel {
+    background-color: #fd9a80;
+    width: fit-content;
+    padding: 10px 40px 50px;
+    border-radius: 10px;
+    margin: 50px auto 0;
+}
+
+.btnel {
+    color: white;
+    background-color: rgb(85, 152, 184);
+    border: 1px rgb(85, 152, 184);
+    border-radius: 30px;
+    font-size: larger;
+    display: block;
+    padding: 5px 40px;
+    margin: 30px auto 5px;
+}
+
+.btnel:hover {
+    background-color: rgb(92, 92, 8);
+    transition: all 200ms ease-in;
+}
+
+.btn:hover {
+    background-color: rgb(85, 152, 184);
+    transition: all 200ms ease-in;
 }

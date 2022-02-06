@@ -27,11 +27,13 @@ export default function Login(props) {
     const handleSubmit = (event) => {
         event.preventDefault()
         const id = LoginHelper(credentials.user.email, credentials.user.password).then(
-            id => { if (id > 0) {
-                setCredentials({...credentials, redirect: true})
-                localStorage.setItem('email', credentials.user.email)
-            }}
-        ).catch(err => alert("Invalid Login")) ;
+            id => {
+                if (id > 0) {
+                    setCredentials({ ...credentials, redirect: true })
+                    localStorage.setItem('email', credentials.user.email)
+                }
+            }
+        ).catch(err => alert("Invalid Login"));
         // console.log(localStorage.getItem('email'))
     }
     if (credentials.redirect) {
@@ -43,32 +45,34 @@ export default function Login(props) {
     return (
         <div><br />
             <h1>Sign In</h1><br />
-            <form onSubmit={handleSubmit}>
-                <div className="logInfo">
-                    <div>
-                        <label className="label" htmlFor="email">Email:</label>
-                        <input className="input"
-                            type="text"
-                            name="email"
-                            placeholder=" Enter email..."
-                            value={credentials.user.email}
-                            onChange={handleChange}
-                        />
+            <div className="loginel">
+                <form onSubmit={handleSubmit}>
+                    <div className="logInfo">
+                        <div>
+                            <label className="label" htmlFor="email">Email:</label>
+                            <input className="input"
+                                type="text"
+                                name="email"
+                                placeholder=" Enter email..."
+                                value={credentials.user.email}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <label className="label" htmlFor="password">Enter Password:</label>
+                            <input className="input"
+                                placeholder="Enter password..."
+                                type="password"
+                                // type="text"
+                                name="password"
+                                value={credentials.user.password}
+                                onChange={handleChange}
+                            />
+                        </div>
                     </div>
-                    <div>
-                        <label className="label" htmlFor="password">Enter Password:</label>
-                        <input className="input"
-                            placeholder="Enter password..."
-                            type="password"
-                            // type="text"
-                            name="password"
-                            value={credentials.user.password}
-                            onChange={handleChange}
-                        />
-                    </div>
-                </div>
-                <button className="btn">Log In</button>
-            </form>
+                    <button className="btnel">Log In</button>
+                </form>
+            </div>
         </div>
     )
 }
