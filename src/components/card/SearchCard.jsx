@@ -52,7 +52,7 @@ export default function SearchCard(
                                         </h2>}
                                         <p>{moment(weatherData.dt_txt).format('LLL')}</p>
                                         <hr />
-                                        {info.main && <i className={`fas ${picture} fa-6x mb-3`}></i>}
+                                        {info.main && <i className={`fas ${picture} fa-6x mb-3`}></i>} <br/>
                                         {info.main && <h1 className='fw-bolder mb-5'>
                                             {Math.floor(info.main.temp)}
                                             &deg;F
