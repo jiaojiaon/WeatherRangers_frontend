@@ -4,7 +4,7 @@ import "../../index.css"
 
 export default function NavBar() {
   return (
-    <>
+    <div className="wrapper">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <img
@@ -56,7 +56,7 @@ export default function NavBar() {
 
         </div>
       </nav>
-    </>
+    </div>
 
 
   );

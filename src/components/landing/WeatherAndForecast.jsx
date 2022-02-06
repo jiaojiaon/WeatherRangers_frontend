@@ -1,6 +1,6 @@
 import React from "react";
 
-import Weather from "./Weather";
+import Weather from "./Weather"
 import Forecast from "./Forecast";
 
 import "../../styles/WeatherAndForecast.css";

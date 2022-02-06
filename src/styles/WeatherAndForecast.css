@@ -4,6 +4,7 @@
     flex-direction: column;
     color: #f2f2f2;
     padding: 2rem 3rem;
+    margin-bottom: 50px;
 }
 
 .dailyforecast {
@@ -14,13 +15,6 @@
     background-color: #fafafa;
     border-radius: 5px;
 }
-
-
-/* .WeatherAndForecast__container {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem;
-} */
 
 @media (max-width: 375px) {
     .WeatherAndForecast {

@@ -1,10 +1,9 @@
 import React from 'react';
-import "../index.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Footer() {
   return (
-    <div>
+    <div className="footer">
       <footer>
         <small>© 2022 Farai Mutukumira, Lubna Khalid, Hyeran Park, Jiao Jiao Ding (Group #12)</small>
 
