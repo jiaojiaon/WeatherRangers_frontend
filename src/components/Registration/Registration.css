@@ -73,14 +73,14 @@ $avatar-size: 32px;
     text-align: center;
 }
 
-h1 {
+.title-el{
     margin-top: 10px;
     color: #fff;
     font-size: 60px;
     text-transform: uppercase;
     font-weight: 700;
     font-family: "Josefin Sans", sans-serif;
-    background: linear-gradient(to right, #1475ca 10%, #71bbdd 50%, #fd9a80 60%);
+    background: linear-gradient(to right, #449be7 10%, #25abe8 50%, #dba737 60%);
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
