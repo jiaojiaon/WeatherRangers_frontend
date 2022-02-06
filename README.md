@@ -1,6 +1,6 @@
 # Weather Rangers Front End
 
-# [Click Me for Deployment Link](https://weather-rangers-frontend.herokuapp.com/)
+# [Live Site](https://weather-rangers-frontend.herokuapp.com/)
 
 # Done by : 
 * [Lubna Khalid](https://github.com/lkhalid0095)
