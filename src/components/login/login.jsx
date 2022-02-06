@@ -44,7 +44,7 @@ export default function Login(props) {
     // console.log(credentials.user.email)
     return (
         <div><br />
-            <h1>Sign In</h1><br />
+            <h1 className ="title-el">Sign In</h1><br />
             <div className="loginel">
                 <form onSubmit={handleSubmit}>
                     <div className="logInfo">

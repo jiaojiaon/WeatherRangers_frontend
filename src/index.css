@@ -13,3 +13,8 @@ html {
 .logreg {
     display: flex;
 }
+
+.fw-bolder{
+    color: white;
+    font-size: 50px;
+}

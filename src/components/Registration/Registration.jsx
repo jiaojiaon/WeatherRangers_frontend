@@ -83,7 +83,7 @@ export default function Registration(props) {
     <>
       <div className="form">
         <div className="wrapper">
-          <h1>Welcome!!</h1>
+          <h1 className="title-el">Welcome!!</h1>
         </div>
 
         {/* Calling to the methods */}
